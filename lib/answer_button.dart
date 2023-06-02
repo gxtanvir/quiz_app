@@ -25,6 +25,7 @@ class AnswerButton extends StatelessWidget {
         style: GoogleFonts.dosis(
           color: const Color.fromARGB(255, 225, 243, 247),
         ),
+        textAlign: TextAlign.center,
       ),
     );
   }
