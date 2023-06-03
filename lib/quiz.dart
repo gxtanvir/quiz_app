@@ -34,12 +34,23 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  // Restart Quiz Method
+  void restartQuiz() {
+    setState(() {
+      selectedAnswer = [];
+      activeScreen = QuestionScreen(onSelectAnswer: chosenAnswer);
+    });
+  }
+
   // Method For Storing Answers
   void chosenAnswer(String answer) {
     selectedAnswer.add(answer);
     if (selectedAnswer.length == questions.length) {
       setState(() {
-        activeScreen = ResultScreen(chosenAnswer: selectedAnswer);
+        activeScreen = ResultScreen(
+          chosenAnswer: selectedAnswer,
+          restartButton: restartQuiz,
+        );
       });
     }
   }

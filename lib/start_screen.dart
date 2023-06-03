@@ -7,7 +7,7 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
