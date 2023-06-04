@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuizSummary extends StatelessWidget {
   const QuizSummary({super.key, required this.summaryData});
@@ -9,31 +10,69 @@ class QuizSummary extends StatelessWidget {
   Widget build(context) {
     return SizedBox(
       height: 350,
+      width: 300,
       child: SingleChildScrollView(
         child: Column(
           children: summaryData.map((data) {
             return Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  (((data['question_index'] as int) + 1)).toString(),
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 5, 91, 113),
+                    shape: const CircleBorder(
+                      side: BorderSide(width: 10.5),
+                    ),
+                  ),
+                  onPressed: null,
+                  child: Text(
+                    (((data['question_index'] as int) + 1)).toString(),
+                    style: GoogleFonts.dosis(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
                 ),
                 Expanded(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
                         data['question'] as String,
+                        style: GoogleFonts.dosis(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 212, 245, 252),
+                        ),
                       ),
                       const SizedBox(
                         height: 5,
                       ),
                       Text(
                         data['user_answer'] as String,
+                        style: GoogleFonts.dosis(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 196, 169, 79),
+                        ),
                       ),
                       const SizedBox(
-                        height: 3,
+                        height: 2,
                       ),
                       Text(
                         data['correct_answer'] as String,
+                        style: GoogleFonts.dosis(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 100, 215, 59),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 7,
                       ),
                     ],
                   ),

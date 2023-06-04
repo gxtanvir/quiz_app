@@ -48,7 +48,7 @@ class ResultScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: 30,
+              height: 50,
             ),
             QuizSummary(summaryData: summary),
             const SizedBox(
