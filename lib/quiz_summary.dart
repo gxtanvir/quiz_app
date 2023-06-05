@@ -29,7 +29,7 @@ class QuizSummary extends StatelessWidget {
                   child: Text(
                     (((data['question_index'] as int) + 1)).toString(),
                     style: GoogleFonts.dosis(
-                      fontSize: 14,
+                      fontSize: 17,
                       fontWeight: FontWeight.bold,
                       color: const Color.fromARGB(255, 255, 255, 255),
                     ),
@@ -44,7 +44,7 @@ class QuizSummary extends StatelessWidget {
                       Text(
                         data['question'] as String,
                         style: GoogleFonts.dosis(
-                          fontSize: 15,
+                          fontSize: 19,
                           fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 212, 245, 252),
                         ),
@@ -55,18 +55,15 @@ class QuizSummary extends StatelessWidget {
                       Text(
                         data['user_answer'] as String,
                         style: GoogleFonts.dosis(
-                          fontSize: 12,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 196, 169, 79),
                         ),
                       ),
-                      const SizedBox(
-                        height: 2,
-                      ),
                       Text(
                         data['correct_answer'] as String,
                         style: GoogleFonts.dosis(
-                          fontSize: 12,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 100, 215, 59),
                         ),

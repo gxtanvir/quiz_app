@@ -41,14 +41,14 @@ class ResultScreen extends StatelessWidget {
             Text(
               "You have answered $noCorrectAnswer out of $noTotalQuestions questions correctly!",
               style: GoogleFonts.dosis(
-                fontSize: 20,
+                fontSize: 26,
                 fontWeight: FontWeight.bold,
                 color: const Color.fromARGB(255, 225, 243, 247),
               ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: 50,
+              height: 60,
             ),
             QuizSummary(summaryData: summary),
             const SizedBox(
