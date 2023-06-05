@@ -16,7 +16,7 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreen extends State<QuestionScreen> {
   var currentQuestionIndex = 0;
 
-  // Increase Index
+  // Increase Question Index Method
   void answerButton(String selectedAnswer) {
     widget.onSelectAnswer(selectedAnswer);
     setState(() {
@@ -34,6 +34,7 @@ class _QuestionScreen extends State<QuestionScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              // Display Question Index
               Text(
                 questions[currentQuestionIndex].questionText,
                 style: GoogleFonts.dosis(
@@ -46,6 +47,7 @@ class _QuestionScreen extends State<QuestionScreen> {
               const SizedBox(
                 height: 40,
               ),
+              // Display Answer Option
               ...questions[currentQuestionIndex]
                   .getShuffledAnswer()
                   .map((answer) {

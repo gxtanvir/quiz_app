@@ -8,7 +8,8 @@ class ResultScreen extends StatelessWidget {
       {super.key, required this.chosenAnswer, required this.restartButton});
   final List<String> chosenAnswer;
   final void Function() restartButton;
-
+  
+  // Answer store method
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summaryData = [];
 

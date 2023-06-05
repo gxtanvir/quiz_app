@@ -1,3 +1,4 @@
+// Answer n Question Model
 class QuizQuestion {
   const QuizQuestion(this.questionText, this.answers);
 

@@ -26,7 +26,9 @@ class QuizSummary extends StatelessWidget {
                     ),
                   ),
                   onPressed: null,
-                  child: Text(
+                  child: 
+                  // Display Question Number
+                  Text(
                     (((data['question_index'] as int) + 1)).toString(),
                     style: GoogleFonts.dosis(
                       fontSize: 17,
@@ -41,6 +43,7 @@ class QuizSummary extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
+                      // Dsiplay Question
                       Text(
                         data['question'] as String,
                         style: GoogleFonts.dosis(
@@ -52,6 +55,7 @@ class QuizSummary extends StatelessWidget {
                       const SizedBox(
                         height: 5,
                       ),
+                      // Dsiplay User Selected Answer
                       Text(
                         data['user_answer'] as String,
                         style: GoogleFonts.dosis(
@@ -60,6 +64,7 @@ class QuizSummary extends StatelessWidget {
                           color: const Color.fromARGB(255, 196, 169, 79),
                         ),
                       ),
+                      // Display Correct Answer
                       Text(
                         data['correct_answer'] as String,
                         style: GoogleFonts.dosis(

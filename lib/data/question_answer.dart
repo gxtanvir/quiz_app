@@ -1,5 +1,6 @@
 import 'package:quiz_exam/model/quiz_question.dart';
 
+// List of Questions n Answers
 const questions = [
   QuizQuestion(
       'What is the capital of France?',
